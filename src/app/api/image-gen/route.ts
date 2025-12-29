@@ -42,7 +42,8 @@ export async function POST(req: NextRequest) {
       input: {
         prompt: contents,
         aspect_ratio: "9:16",
-        sync_mode: true, // This is your GDPR shield!
+        sync_mode: true, // This is your GDPR shield!,
+        enable_web_search: true
        },
       logs: true,
       onQueueUpdate: (update) => {
