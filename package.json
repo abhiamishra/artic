@@ -1,0 +1,40 @@
+{
+  "name": "ticket-maker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fal-ai/client": "^1.6.2",
+    "@fontsource/limelight": "^5.2.6",
+    "@fontsource/righteous": "^5.2.6",
+    "@fontsource/ropa-sans": "^5.2.6",
+    "@fontsource/rye": "^5.2.6",
+    "@google/genai": "^1.15.0",
+    "@google/generative-ai": "^0.24.1",
+    "clsx": "^2.1.1",
+    "dompurify": "^3.2.6",
+    "fs": "^0.0.1-security",
+    "html-to-image": "^1.11.13",
+    "lucide-react": "^0.540.0",
+    "next": "15.4.7",
+    "openai": "^5.15.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.7",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
