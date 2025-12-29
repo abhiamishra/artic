@@ -1,10 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import OpenAI, { toFile } from "openai";
-import { GoogleGenAI, Modality } from "@google/genai";
-import { Buffer } from 'node:buffer';  // Explicit import
-import fs from 'fs';
-import { writeFile } from "fs/promises";
-import path from "path";
 import { fal } from "@fal-ai/client";
 
 export const runtime = "nodejs"; // or "edge" if you prefer; fetch+FormData works in both
@@ -75,8 +69,10 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json(response.data.images[0]);
 
-  } catch (e: any) {
+  } catch (e: unknown) {
     //console.log(e);
-    return NextResponse.json({ error: e?.message ?? "Unknown error" }, { status: 500 });
+    if (e instanceof Error) {
+      return NextResponse.json({ error: e?.message ?? "Unknown error" }, { status: 500 });
+    }
   }
 }

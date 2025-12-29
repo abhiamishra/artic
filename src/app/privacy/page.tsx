@@ -1,6 +1,4 @@
 'use client';
-import ConcertLandingPage from "@/components/ConcertLandingPage";
-import Image from "next/image";
 import Link from "next/link";
 
 // Add Google Fonts - you can experiment with different combinations
@@ -262,9 +260,9 @@ export default function Home() {
 
                     <section className="mb-8">
                         <h2 className="text-xl font-semibold mb-3 text-gray-900">2. How Data is Processed</h2>
-                        <p className="mb-4">To generate your poster, we use "pass-through" services that do not persist your data:</p>
+                        <p className="mb-4">To generate your poster, we use pass-through services that do not persist your data:</p>
                         <ul className="list-disc ml-6 space-y-2">
-                        <li><strong>Cloudflare:</strong> Your request travels through Cloudflare's secure global network. Cloudflare does not store your image data.</li>
+                        <li><strong>Cloudflare:</strong> Your request travels through Cloudflare and their secure global network. Cloudflare does not store your image data.</li>
                         <li><strong>fal.ai:</strong> We send your prompt to fal.ai. We use <em>Sync Mode</em>, which instruct fal.ai to delete the image data instantly upon delivery.</li>
                         </ul>
                     </section>
@@ -272,7 +270,7 @@ export default function Home() {
                     <section className="mb-8">
                         <h2 className="text-xl font-semibold mb-3 text-gray-900">3. Your Rights (GDPR)</h2>
                         <p>
-                        Because we do not store your data, there is no "Personal Data" for us to delete or modify. 
+                        Because we do not store your data, there is no Personal Data for us to delete or modify. 
                         For questions about this stateless architecture, contact the developer at: 
                         <span className="text-blue-600">abhiamishra0@gmail.com</span>.
                         </p>

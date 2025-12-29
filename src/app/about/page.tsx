@@ -1,6 +1,4 @@
 'use client';
-import ConcertLandingPage from "@/components/ConcertLandingPage";
-import Image from "next/image";
 import Link from "next/link";
 
 // Add Google Fonts - you can experiment with different combinations
