@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { fal } from "@fal-ai/client";
 
-export const runtime = 'edge';
-
 fal.config({
   credentials: process.env.FAL_API_KEY
 });
