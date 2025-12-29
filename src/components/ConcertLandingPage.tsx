@@ -122,7 +122,7 @@ export default function ConcertLandingPage() {
     <>
       {/* Google Fonts - Add these fonts to your project */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+      <link rel="preconnect" href="https://fonts.gstatic.pcom" crossOrigin="" />
       <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Righteous&family=Bungee&family=Monoton&family=Creepster&family=Black+Ops+One&family=Press+Start+2P&family=Audiowide&display=swap" rel="stylesheet" />
       
        {/* Custom Animation Styles */}
@@ -383,9 +383,27 @@ export default function ConcertLandingPage() {
                 </h1>
               </Link>
             </div>
+           
             <p className={`text-gray-300 text-lg ${currentFonts.subtitle}`}>
               Enter show details and create your Artic
             </p>
+            <br/>
+            <Link href="/privacy" className="cursor-pointer">
+              <p 
+                style={{ wordSpacing: '0.5em' }} 
+                className={`
+                    text-xs font-bold tracking-wider whitespace-nowrap
+                    bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent
+                    ${currentFonts.subtitle}
+                    transition-all duration-300 ease-out
+                    hover:scale-105 hover:brightness-150
+                    hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]
+                    cursor-default select-none
+                `}
+              >
+                PRIVACY POLICY
+              </p>
+            </Link>
           </div>
 
           {/* Form */}

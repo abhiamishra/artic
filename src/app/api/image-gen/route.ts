@@ -49,7 +49,8 @@ export async function POST(req: NextRequest) {
     const response = await fal.subscribe("fal-ai/nano-banana-pro", {
       input: {
         prompt: contents,
-        aspect_ratio: "1:1"
+        aspect_ratio: "9:16",
+        sync_mode: true, // This is your GDPR shield!
        },
       logs: true,
       onQueueUpdate: (update) => {
@@ -58,11 +59,20 @@ export async function POST(req: NextRequest) {
         }
       },
     });
-    //console.log(response.data);
-    //console.log(response.requestId);
-    //console.log(response);
+    // console.log(response.data);
+    // console.log(response.data.images[0]);
+    // //console.log(response.requestId);
+    // console.log(response);
 
     // 3. Forward the image data and the correct 'Content-Type' (image/png, etc.)
+    // Return the Base64 image data directly
+    // const image = response.data.images[0];
+
+    // return Response.json({ 
+    //   base64: image.file_data, 
+    //   type: image.content_type 
+    // });
+
     return NextResponse.json(response.data.images[0]);
 
   } catch (e: any) {
