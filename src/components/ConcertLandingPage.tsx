@@ -24,6 +24,17 @@ const currentFonts = {
   button: fonts.pressStart, // Button text
 };
 
+interface iTunesResult {
+  artworkUrl100: string;
+  collectionName?: string;
+  artistName?: string;
+  [key: string]: unknown; // Replaces 'any' with a safer alternative
+}
+
+interface iTunesResponse {
+  results: iTunesResult[];
+}
+
 export default function ConcertLandingPage() {
   const [formData, setFormData] = useState({
     artist: '',
@@ -40,7 +51,7 @@ export default function ConcertLandingPage() {
   const [albumLoading, setAlbumLoading] = useState(false); // This tracks if we are waiting
   const [error, setError] = useState('');
   const [albumName, setAlbumName] = useState('');
-  const [albumData, setAlbumData] = useState<any>(null);
+  const [albumData, setAlbumData] = useState<iTunesResponse | null>(null);
   
   const [fullarticURL, setFullArticURL] = useState(""); // This stores the image link
   const [imageUrl, setImageUrl] = useState(""); // This stores the image link
