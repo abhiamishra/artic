@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
     const contents = 
     `A vertical trading card design in a 16-bit pixel art style. The top half is blank - for an other image to be inserted. 
     
-    The bottom half is a structured UI layout for a concert ticket. 
+    The bottom half is a structured UI layout for a concert tickaet. 
 
     Don't write anything more except what's below: 
 

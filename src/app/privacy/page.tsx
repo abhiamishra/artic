@@ -179,7 +179,7 @@ export default function Home() {
                     </h2>
                     <ul className="list-disc ml-4 sm:ml-6 space-y-2 text-sm sm:text-base">
                       <li>
-                        <strong>No Image Storage:</strong> We do not store the images you generate. They are processed in real-time and delivered directly to your browser.
+                        <strong>No Image Storage:</strong> We do not host or store the images you upload or generate. Images are processed in-memory and delivered directly to your session.
                       </li>
                       <li>
                         <strong>No Accounts:</strong> We do not require sign-up, so we do not collect names, emails, or passwords.
@@ -199,10 +199,24 @@ export default function Home() {
                     </p>
                     <ul className="list-disc ml-4 sm:ml-6 space-y-2 text-sm sm:text-base">
                       <li>
-                        <strong>Cloudflare:</strong> Your request travels through Cloudflare and their secure global network. Cloudflare does not store your image data.
+                        <strong>Railway:</strong> Our application is hosted on Railway. Railway provides the secure environment where your requests are processed. They do not persist your image data to any permanent storage.
                       </li>
                       <li>
-                        <strong>fal.ai:</strong> We send your prompt to fal.ai. We use <em>Sync Mode</em>, which instruct fal.ai to delete the image data instantly upon delivery.
+                        <strong>fal.ai:</strong> We send your prompt to fal.ai. We use <em>Sync Mode</em>, which instruct fal.ai to delete the image data instantly upon delivery. We utilize secure transmission methods (including Base64 passing where applicable) to ensure that your images are processed and then immediately cleared from the processing queue.
+                      </li>
+                    </ul>
+                  </section>
+
+                  <section className="mb-6 sm:mb-8">
+                    <h2 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-gray-900">
+                      3. Third-Party Links
+                    </h2>
+                    <p className="mb-3 sm:mb-4 text-sm sm:text-base">
+                      To generate your Artic with album, we use iTunes API:
+                    </p>
+                    <ul className="list-disc ml-4 sm:ml-6 space-y-2 text-sm sm:text-base">
+                      <li>
+                        <strong>iTunes API:</strong> When you search for an album, only your search term is sent to Apple; no personal information or generated images are shared with them.
                       </li>
                     </ul>
                   </section>
@@ -218,6 +232,11 @@ export default function Home() {
                         abhiamishra0@gmail.com
                       </a>.
                     </p>
+                    <ul className="list-disc ml-4 sm:ml-6 space-y-2 text-sm sm:text-base">
+                      <li>
+                        <strong></strong> Once you close your browser tab, the temporary link to your generated image eventually expires and the data is gone.
+                      </li>
+                    </ul>
                   </section>
 
                   <footer className="pt-4 sm:pt-6 border-t text-xs sm:text-sm text-gray-500">
